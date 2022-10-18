@@ -1,0 +1,46 @@
+<main>
+
+	<select (change)="changeLang($event.target)">
+		<option value="en" [selected]="lang == 'en'">English</option>
+		<option value="ar" [selected]="lang == 'ar'">Arabic</option>
+	</select>
+
+	<section class="content">
+		<div class="content-block">
+			<div class="content-main">
+				<div class="content-main__photo">
+					<img src="{{ college?.photo }}" alt='{{"Photo" | translate}}' />
+				</div>
+				<h1 class="content-main__title" translate>
+					college.name
+				</h1>
+			</div>
+
+			<nav class="content-nav">
+				<ul class="content-nav__list">
+					<li class="content-nav__item">
+						<a routerLink="'/about'">{{"About" | translate}}</a>
+					</li>
+					<li class="content-nav__item">
+						<a routerLink="'/courses'">{{"Courses" | translate}}</a>
+					</li>
+					<li class="content-nav__item">
+						<a routerLink="'/teachers'">{{"Teachers" | translate}}</a>
+					</li>
+					<li class="content-nav__item">
+						<a routerLink="'/contacts'">{{"Contacts" | translate}}</a>
+					</li>
+				</ul>
+			</nav>
+
+		</div>
+	</section>
+
+
+	<section>
+		<div>
+			<div translate>college.about</div>
+		</div>
+	</section>
+
+</main>
