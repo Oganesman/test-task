@@ -7,10 +7,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { SorryComponent } from './aboute/sorry/sorry.component';
 
 
 const routes: Routes = [
 	{ path: '', component: CollegeComponent },
+	{ path: 'notfound', component: SorryComponent },
 	{ path: "**", redirectTo: "/notfound" }
 ];
 
@@ -21,7 +23,8 @@ export function HttpLoaderFactory(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    CollegeComponent
+    CollegeComponent,
+    SorryComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,12 @@
+<div class="content">
+	<div class="translate">
+		<select (change)="changeLang($event.target)">
+			<option value="en" [selected]="lang == 'en'">English</option>
+			<option value="ar" [selected]="lang == 'ar'">Arabic</option>
+		</select>
+	</div>
+	
+
+
+	<h1 translate>{{sorry}}</h1>
+</div>
